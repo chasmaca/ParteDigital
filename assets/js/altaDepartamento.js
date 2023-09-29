@@ -12,14 +12,14 @@ $(document).ready(function($) {
                 $('#altaDepartamentoForm').trigger("reset");
             });
         } else {
-            notifier('Revisa los datos del formulario');
+            notifier('Revisa los datos del formulario. Recuerda que el ceco debe comenzar por ESB');
         }
     });
 
     function validaAltaDepartamento() {
         var valida = true;
         ($('#nombreDepartamento').val() === "" || $('#nombreDepartamento').val() === null) ? valida = false: valida = valida; // jshint ignore:line
-        ($('#cecoDepartamento').val() === "" || $('#cecoDepartamento').val() === null) ? valida = false: valida = valida; // jshint ignore:line
+        ($('#cecoDepartamento').val() === "" || $('#cecoDepartamento').val() === null || $('#cecoDepartamento').val().substring(0,3) != "ESB") ? valida = false: valida = valida; // jshint ignore:line
         return valida;
     }
 });

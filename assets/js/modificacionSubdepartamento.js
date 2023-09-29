@@ -71,7 +71,7 @@ function validaModificacionSubdpto() {
     let valida = true;
 
     ($('#nombreHidden').val() === "" || $('#nombreHidden').val() === null) ? valida = false : valida = valida;
-    ($('#treintaBarraHidden').val() === "" || $('#treintaBarraHidden').val() === null) ? valida = false : valida = valida;
+    ($('#treintaBarraHidden').val() === "" || $('#treintaBarraHidden').val() === null || $('#treintaBarraHidden').val().substring(0,3) != "30/") ? valida = false : valida = valida;
     ($('#departamento').val() === "0") ? valida = false : valida = valida;
     ($('#subdepartamento').val() === "0") ? valida = false : valida = valida;
 

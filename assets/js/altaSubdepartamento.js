@@ -15,16 +15,15 @@ $(document).ready(function($) {
                 cargarSelect('departamento', 'listadoDepartamentos');
             });
         } else {
-            notifier('Revisa los datos del formulario');
+            notifier('Revisa los datos del formulario. Recuerda que el TreintaBarra debe comenzar por 30/');
         }
     });
 });
 
 function validaAltaSubdepartamento() {
     var valida = true;
-
     ($('#nombreHidden').val() === "" || $('#nombreHidden').val() === null) ? valida = false: valida = valida; // jshint ignore:line
-    ($('#treintaBarraHidden').val() === "" || $('#treintaBarraHidden').val() === null) ? valida = false: valida = valida; // jshint ignore:line
+    ($('#treintaBarraHidden').val() === "" || $('#treintaBarraHidden').val() === null || $('#treintaBarraHidden').val().substring(0,3) != "30/") ? valida = false: valida = valida; // jshint ignore:line
     ($('#departamento').val() === "0") ? valida = false: valida = valida; // jshint ignore:line
 
     return valida;

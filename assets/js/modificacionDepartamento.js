@@ -39,6 +39,6 @@ function validaModificacionDepartamento() {
     let valida = true;
     ($('#departamento').val() === "0") ? valida = false : valida = valida;
     ($('#nombre').val() === "" || $('#nombre').val() === null) ? valida = false : valida = valida;
-    ($('#ceco').val() === "" || $('#ceco').val() === null) ? valida = false : valida = valida;
+    ($('#ceco').val() === "" || $('#ceco').val() === null || $('#ceco').val().substring(0,3) != "ESB") ? valida = false : valida = valida;
     return valida;
 }
