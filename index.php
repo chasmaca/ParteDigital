@@ -1,4 +1,4 @@
 <?php
-header("Location: https://www.elpartedigital.com/index.html");
+header("Location: http://localhost/ParteDigital/index.html");
 exit();
 ?>
