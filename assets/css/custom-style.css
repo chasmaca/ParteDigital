@@ -1,0 +1,55 @@
+form input,
+form textarea {
+    border: 0;
+    outline: 0;
+    /* padding: 1em; */
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    /* resize: none; */
+}
+
+.enlace_operacion {
+    cursor: pointer;
+}
+
+.fa-plus {
+    color: black;
+}
+
+.fa-minus {
+    color: black;
+}
+
+.form-no-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0px;
+    border-radius: 0rem;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    /* background-color: rgba(0, 0, 0, 0); */
+    color: #007bff;
+    cursor: pointer;
+}

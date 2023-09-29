@@ -1,0 +1,32 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-boxes fa-fw"></i> &nbsp; LISTADO DEPARTAMENTOS
+    </h3>
+</div>
+
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <div class="table-responsive">
+        <div id="toolbar" class="select">
+            <select class="form-control">
+              <option value="">Export Basic</option>
+              <option value="all">Export All</option>
+              <option value="selected">Export Selected</option>
+            </select>
+          </div>
+          <div id="gestorGlobalTable">
+              <table id="listadoDepartartamento"
+                     class="table table-dark table-sm"
+                      data-show-export="true"
+                      data-toolbar="#toolbar"
+              ></table>
+          </div>
+    </div>
+</div>
+
+<script src="./../assets/js/consultaDepartamento.js" ></script>

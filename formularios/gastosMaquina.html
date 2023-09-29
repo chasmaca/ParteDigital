@@ -1,0 +1,60 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; GASTOS MÁQUINA
+    </h3>
+</div>
+
+<div class="container-fluid">
+    <form class="form-neon" autocomplete="off" method="POST" id="gastosMaquinaForm" name="gastosMaquinaForm"  enctype="multipart/form-data">
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Periodos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="periodo" class="bmd-label-floating">Periodo</label>
+                            <select class="form-control" id="periodo" name="periodo">
+                                <option value="0">Selecciona Periodo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><i class="far fa-image"></i> &nbsp; Listado</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="listadoPaper" class="bmd-label-floating">Listado PaperCut</label>
+                            <input type="file" class="form-control-file" id="listadoPaper" name="listadoPaper">
+                            <small class="text-muted">Fichero de carga PaperCut.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <table id="exceltable">  
+        </table> 
+        <br><br><br>
+        <div class="table-responsive">
+            <div id="toolbar" class="select">
+                <select class="form-control">
+                  <option value="">Export Basic</option>
+                  <option value="all">Export All</option>
+                  <option value="selected">Export Selected</option>
+                </select>
+              </div>
+              <div id="listadoGastosMaquinaTable">
+                  <table id="listadoGastosMaquina"
+                         class="table table-dark table-sm"
+                         data-search="true"
+                  ></table>
+              </div>
+        </div>
+    </form>
+</div>
+
+<script src="./../assets/js/gastosMaquina.js" ></script>

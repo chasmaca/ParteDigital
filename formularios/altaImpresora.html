@@ -1,0 +1,77 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; NUEVA IMPRESORA
+    </h3>
+</div>
+
+
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form class="form-neon" autocomplete="off" method="POST" id="altaImpresoraForm" name="altaImpresoraForm">
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="modelo" class="bmd-label-floating">Modelo</label>
+                            <input type="text" class="form-control" id="modelo" name="modelo" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="edificio" class="bmd-label-floating">Edificio</label>
+                            <input type="text" class="form-control" id="edificio" name="edificio" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="ubicacion" class="bmd-label-floating">Ubicacion</label>
+                            <input type="text" class="form-control" id="ubicacion" name="ubicacion" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="fecha" class="bmd-label-floating">Fecha (DD/MM/YYYY)*</label>
+                            <input type="text" class="form-control" id="fecha" name="fecha" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="serie" class="bmd-label-floating">N. Serie</label>
+                            <input type="text" class="form-control" id="serie" name="serie" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="maquina" class="bmd-label-floating">N. Máquina</label>
+                            <input type="text" class="form-control" id="maquina" name="maquina" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button" id="altaImpresoraButton" class="btn btn-success"><i class="far fa-save"></i> &nbsp; GUARDAR</button>
+        </p>
+    </form>
+</div>	
+
+<script src="./../assets/js/altaImpresora.js" ></script>

@@ -1,0 +1,40 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; BAJA USUARIO
+    </h3>
+</div>
+
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form action="" class="form-neon" autocomplete="off" method="POST" id="bajaUsuarioForm" name="bajaUsuarioForm">
+        <fieldset>
+            <legend><i class="fas fa-truck-loading"></i> &nbsp; Selecciona Usuario</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="usuario" class="bmd-label-floating">Selecciona Usuario</label>
+                            <select class="form-control" id="usuario" name="usuario">
+                                <option value="0">Selecciona el Usuario</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button"  id="bajaUsuarioButton" class="btn btn-success"><i class="far fa-save"></i> &nbsp; BORRAR</button>
+        </p>
+    </form>
+</div>
+
+<script src="./../assets/js/bajaUsuario.js" ></script>

@@ -1,0 +1,66 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; MODIFICACIÓN ARTÍCULO
+    </h3>
+</div>
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form action="" class="form-neon" autocomplete="off" method="POST" id="modificacionArticuloForm" name="modificacionArticuloForm">
+        <fieldset>
+            <legend><i class="fas fa-truck-loading"></i> &nbsp; Selecciona Artículo</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="tipo" class="bmd-label-floating">Selecciona Tipo</label>
+                            <select class="form-control" id="tipo" name="tipo">
+                                <option value="0">Selecciona el Tipo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="articulo" class="bmd-label-floating">Selecciona Artículo</label>
+                            <select class="form-control" id="articulo" name="articulo">
+                                <option value="0">Selecciona el Artículo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="descripcion" class="bmd-label-floating">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="precio" class="bmd-label-floating">Precio</label>
+                            <input type="text" class="form-control" id="precio" name="precio" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button"  id="modificacionArticuloButton" class="btn btn-success"><i class="far fa-save"></i> &nbsp; MODIFICAR</button>
+        </p>
+    </form>
+</div>
+
+<script src="./../assets/js/modificacionArticulo.js" ></script>

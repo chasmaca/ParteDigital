@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ENEASP - Copisteria UFV</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Copisteria de ENEASP para la universidad Francisco de Vitoria" />
+    <link rel="stylesheet" href="./../assets/css/normalize.css">
+    <link rel="stylesheet" href="./../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="./../assets/css/all.css">
+    <link rel="stylesheet" href="./../assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./../assets/css/noty.css" />
+    <script src="./../assets/js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./../assets/css/admin-style.css">
+    <link rel="stylesheet" href="./../assets/css/bootstrap-table.min.css">
+    <link href="./../assets/css/jquery.spin.css" rel="stylesheet" type="text/css" />
+    <link href="./../assets/css/common-styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main class="full-box main-container">
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="./../assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        Luís Carbó <br><small class="roboto-condensed-light">Super Admin</small>
+                    </figcaption>
+                </figure>
+                <div class="full-box nav-lateral-bar"></div>
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-building fa-fw"></i> &nbsp; Departamento <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="altaDepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Alta Departamento</a></li>
+                                <li><a href="#" id="bajaDepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Baja Departamento</a></li>
+                                <li><a href="#" id="modificacionDepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Modificación Departamento</a></li>
+                                <li><a href="#" id="consultaDepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Consulta Departamento</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-building fa-fw"></i> &nbsp; Subdepartamento <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="altaSubdepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Alta Subdepartamento</a></li>
+                                <li><a href="#" id="bajaSubdepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Baja Subdepartamento</a></li>
+                                <li><a href="#" id="modificacionSubdepartamento"><i class="fas fa-building fa-fw"></i> &nbsp; Modificación Subdepartamento</a></li>
+                                <li><a href="#" id="gestionFichero"><i class="fas fa-building fa-fw"></i> &nbsp; Carga masiva</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-user fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="altaUsuario"><i class="fas fa-user-plus fa-fw"></i> &nbsp; Alta Usuarios</a></li>
+                                <li><a href="#" id="bajaUsuario"><i class="fas fa-user-times fa-fw"></i> &nbsp; Baja Usuarios</a></li>
+                                <li><a href="#" id="modificacionUsuario"><i class="fas fa-user fa-fw"></i> &nbsp; Modificación Usuarios</a></li>
+                                <li><a href="#" id="consultaUsuario"><i class="fas fa-users fa-fw"></i> &nbsp; Consulta Usuarios</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-box-open fa-fw"></i> &nbsp; Artículos <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="altaArticulo"><i class="fas fa-box fa-fw"></i> &nbsp; Alta Artículos</a></li>
+                                <li><a href="#" id="bajaArticulo"><i class="fas fa-boxes fa-fw"></i> &nbsp; Baja Artículos</a></li>
+                                <li><a href="#" id="modificacionArticulo"><i class="fas fa-box fa-fw"></i> &nbsp; Modificación Artículos</a></li>
+                                <li><a href="#" id="consultaArticulo"><i class="fas fa-box fa-fw"></i> &nbsp; Consulta Artículos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" id="trabajos"><i class="fas fa-file fa-fw"></i> &nbsp; Trabajos</a>
+                        </li>
+                        <li>
+                            <a href="#" id="informes"><i class="fas fa-chart-bar"></i> &nbsp; Informes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-print fa-fw"></i> &nbsp; Impresoras <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="altaImpresora"><i class="fas fa-print fa-fw"></i> &nbsp; Alta Impresoras</a></li>
+                                <li><a href="#" id="bajaImpresora"><i class="fas fa-print fa-fw"></i> &nbsp; Baja Impresoras</a></li>
+                                <li><a href="#" id="modificacionImpresora"><i class="fas fa-print fa-fw"></i> &nbsp; Modificación Impresoras</a></li>
+                                <li><a href="#" id="consultaImpresora"><i class="fas fa-print fa-fw"></i> &nbsp; Consulta Impresoras</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-lock"></i> &nbsp; Cierre <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#" id="gastosMaquina"><i class="fas fa-copy"></i> &nbsp; Gastos Máquina</a></li>
+                                <li><a href="#" id="gastosImpresora"><i class="fas fa-print fa-fw"></i> &nbsp; Gastos Impresora</a></li>
+                                <li><a href="#" id="cerrarMes"><i class="fas fa-hand-holding-usd"></i> &nbsp; Cerrar Mes</a></li>
+                                <li><a href="#" id="passwordMaestra"><i class="fas fa-user-secret fa-fw"></i> &nbsp; Contraseña Maestra</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- Page content -->
+        <section class="full-box page-content">
+            <nav class="full-box navbar-info">
+                <a href="#" class="float-left show-nav-lateral" title="lateral"><i class="fas fa-exchange-alt"></i></a>
+                <a href="#" data-toggle="modal" data-target="#ModalHelp" title="modal"><i class="far fa-question-circle"></i></a>
+                <a href="#" title="usuario"><i class="fas fa-user-cog"></i></a>
+                <a href="./../index.html" class="btn-exit-system" title="indice"><i class="fas fa-power-off"></i></a>
+            </nav>
+            <div class="full-box page-header" id="contenedor">
+
+            </div>
+        </section>
+        <div class="modal fade" id="ModalHelp" tabindex="-1" role="dialog" aria-labelledby="ModalHelpTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title roboto-medium text-center" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sunt perferendis magni expedita possimus quidem, ex, culpa totam, sapiente, laboriosam iste fugit accusamus odio! Impedit beatae eveniet asperiores distinctio sunt?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light roboto-condensed-regular" data-dismiss="modal">Close</button> &nbsp;
+                        <button type="button" class="btn btn-light roboto-condensed-regular">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="./../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./../assets/js/popper.min.js"></script>
+    <script src="./../assets/js/bootstrap.min.js"></script>
+    <script src="./../assets/js/noty.js" type="text/javascript"></script>
+    <script src="./../assets/js/bootstrap-material-design.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('body').bootstrapMaterialDesign();
+        });
+    </script>
+    <script src="./../assets/js/main-admin.js?origin=20220331"></script>
+    <script src="./../assets/js/generaContenedor.js?origin=20220331"></script>
+    <script src="./../assets/js/altaUsuario.js?origin=20220331"></script>
+    <script src="./../assets/js/home-gestor.js?origin=20220331"></script>
+
+    <script src="./../assets/js/cargaMasiva.js"></script>
+    <script src="./../assets/js/opensource/tableExport.min.js"></script>
+    <script src="./../assets/js/opensource/jspdf.min.js"></script>
+    <script src="./../assets/js/opensource/jspdf.plugin.autotable.js"></script>
+    <script src="./../assets/js/opensource/bootstrap-table.min.js"></script>
+    <script src="./../assets/js/opensource/bootstrap-table-export.min.js"></script>
+    <script type="text/javascript" src="./../assets/js/opensource/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="./../assets/js/opensource/jszip.js"></script>
+    <script src="./../assets/js/jquery.spin.js" type="text/javascript"></script>
+</body>
+
+</html>

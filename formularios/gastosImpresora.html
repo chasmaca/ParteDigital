@@ -1,0 +1,50 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; GASTOS IMPRESORA
+    </h3>
+</div>
+
+
+<div class="container-fluid">
+    <form class="form-neon" autocomplete="off" method="POST" id="gastosImpresoraForm" name="gastosImpresoraForm">
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Periodos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="periodo" class="bmd-label-floating">Periodo</label>
+                            <select class="form-control" id="periodo" name="periodo">
+                                <option value="0">Selecciona Periodo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="table-responsive">
+        <div id="toolbar" class="select">
+            <select class="form-control">
+              <option value="">Export Basic</option>
+              <option value="all">Export All</option>
+              <option value="selected">Export Selected</option>
+            </select>
+          </div>
+          <div id="listadoGastosImpresorasTable">
+              <table id="listadoGastosImpresoras"
+                     class="table table-dark table-sm"
+                      data-toolbar="#toolbar"
+                      data-search="true"
+                      data-show-columns="true"
+                      data-show-export="true"
+              ></table>
+          </div>
+    </div>
+</div>
+
+<script src="./../assets/js/gastosImpresora.js" ></script>

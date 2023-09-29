@@ -1,0 +1,64 @@
+<?php
+/**
+ * Class: altaArticulo.php
+ *
+ * Formulario de alta de nuevos articulos de reprografia
+ * php version 7.3.28
+ * 
+ * @category Insert
+ * @package  DaoInsert
+ * @author   Jesus Madrazo <chasmaca@gmail.com>
+ * @license  http://www.php.net/license/3_0.txt  PHP License 3.0
+ * @version  GIT: <Initial Import>
+ * @link     https://www.elpartedigital.com/
+ */
+
+require_once 'query.php';
+require_once '../../utiles/connectDBUtiles.php';
+
+global $consultaImpresoras, $mysqlCon;
+
+/*definimos el json*/
+$jsondata = array();
+$jsondata["data"] = array();
+
+/*Prepare Statement*/
+if ($stmt = $mysqlCon->prepare($consultaImpresoras)) {
+
+    /*Ejecucion*/
+    $stmt->execute();
+    /*Almacenamos el resultSet*/
+
+    //IMPRESORA_ID, MODELO, EDIFICIO, UBICACION,FECHA,SERIE,NUMERO
+    $stmt->bind_result($IMPRESORA_ID, $MODELO, $EDIFICIO, $UBICACION, $FECHA, $SERIE, $NUMERO);
+
+    /*Incluimos las lineas de la consulta en el json a devolver*/
+    while ($stmt->fetch()) {
+        $tmp = array();
+        
+        $tmp["IMPRESORA_ID"] = utf8_encode($IMPRESORA_ID);
+        $tmp["MODELO"] = utf8_encode($MODELO);
+        $tmp["EDIFICIO"] = utf8_encode($EDIFICIO);
+        $tmp["UBICACION"] = utf8_encode($UBICACION);
+        $tmp["FECHA"] = utf8_encode($FECHA);
+        $tmp["SERIE"] = utf8_encode($SERIE);
+        $tmp["NUMERO"] = utf8_encode($NUMERO);
+
+        array_push($jsondata["data"], $tmp);
+    }
+    $stmt->close();
+    /*Asociamos el correcto funcionamiento al json para comprobar en el js*/
+    $jsondata["success"] = true;
+} else {
+    /*Llegamos aqui con error, asociamos false para identificarlo en el js*/
+    $jsondata["success"] = false;
+    die("Errormessage: " . $mysqlCon->error);
+}
+
+/*Devolvemos el JSON con los datos de la consulta*/
+header('Content-type: application/json; charset=utf-8');
+echo json_encode($jsondata, JSON_FORCE_OBJECT);
+
+?>
+
+

@@ -1,0 +1,32 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; CERRAR MES
+    </h3>
+</div>
+
+<div class="container-fluid">
+    <form class="form-neon" autocomplete="off" method="POST" id="cerrarMesForm" name="cerrarMesForm">
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Periodos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="periodo" class="bmd-label-floating">Periodo</label>
+                            <select class="form-control" id="periodo" name="periodo">
+                                <option value="0">Selecciona Periodo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button" id="cerrarMesButton" class="btn btn-success"><i class="far fa-save"></i> &nbsp; CERRAR</button>
+        </p>
+    </form>
+</div>

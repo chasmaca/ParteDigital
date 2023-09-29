@@ -1,0 +1,62 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; BAJA DEPARTAMENTO
+    </h3>
+    <!-- <p class="text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
+    </p> -->
+</div>
+
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form action="" class="form-neon" autocomplete="off" method="POST" id="borradoDepartamentoForm" name="borradoDepartamentoForm">
+        <fieldset>
+            <legend><i class="fas fa-truck-loading"></i> &nbsp; Selecciona Departamento</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="departamento" class="bmd-label-floating">Departamento</label>
+                            <select class="form-control" id="departamento" name="departamento">
+                                    <option value="0">Selecciona el departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Datos Básicos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="NombreDepartamento" class="bmd-label-floating">Nombre de Departamento</label>
+                            <input type="text" pattern="[a-zA-Z0-9 ]{1,50}" class="form-control" id="nombreHidden" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="CeCo" class="bmd-label-floating">Name</label>
+                            <input type="text" pattern="[a-zA-Z0-9 ]{1,30}" class="form-control" id="cecoHidden" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button"  id="borrado-Departamento" class="btn btn-success"><i class="far fa-save"></i> &nbsp; BORRAR</button>
+        </p>
+    </form>
+</div>
+
+<script src="./../assets/js/bajaDepartamento.js" ></script>

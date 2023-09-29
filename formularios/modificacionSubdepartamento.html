@@ -1,0 +1,70 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; MODIFICAR SUBDEPARTAMENTO
+    </h3>
+</div>
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form action="" class="form-neon" autocomplete="off" method="POST" id="modificacionSubdepartamentoForm"
+        name="modificacionSubdepartamentoForm">
+        <fieldset>
+            <legend><i class="fas fa-truck-loading"></i> &nbsp; Selecciona Departamento</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="departamento" class="bmd-label-floating">Departamento</label>
+                            <select class="form-control" id="departamento" name="departamento">
+                                <option value="0">Selecciona el Departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="subdepartamento" class="bmd-label-floating">Departamento</label>
+                            <select class="form-control" id="subdepartamento" name="subdepartamento">
+                                <option value="0">Selecciona el Subdepartamento</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Datos Básicos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="nombreHidden" class="bmd-label-floating">Nombre de Sybdepartamento</label>
+                            <input type="text" pattern="[a-zA-Z0-9 ]{1,50}" class="form-control" id="nombreHidden"
+                                nombre="nombreHidden" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="treintaBarraHidden" class="bmd-label-floating">30/</label>
+                            <input type="text" pattern="[a-zA-Z0-9 ]{1,30}" class="form-control" id="treintaBarraHidden"
+                                nombre="treintaBarraHidden" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button>
+            &nbsp; &nbsp;
+            <button type="button" id="modificacionSubdepartamento" class="btn btn-success"><i class="far fa-save"></i>
+                &nbsp; MODIFICAR</button>
+        </p>
+    </form>
+</div>
+
+<script src="./../assets/js/modificacionSubdepartamento.js" ></script>

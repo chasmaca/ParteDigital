@@ -1,0 +1,17 @@
+.trabajosP,
+.articuloAP,
+.departamentoAP,
+.impresoraAP,
+.subdepartamentoAP,
+.usuarioAP {
+    margin-top: 40px;
+}
+
+.subdepartamentoAD {
+    width: 75%;
+    float: left;
+}
+
+.capasRol {
+    display: none;
+}

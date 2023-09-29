@@ -1,0 +1,96 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left"><i class="fas fa-boxes fa-fw"></i> &nbsp; INFORMES</h3>
+</div>
+
+<div class="container-fluid">
+    <form class="form-neon" autocomplete="off" method="POST" id="listadoInformeForm" name="listadoInformeForm">
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Periodos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="periodo" class="bmd-label-floating">Periodo</label>
+                            <select class="form-control" id="periodo" name="periodo">
+                <option value="0">Selecciona Periodo</option>
+              </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Departamentos</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="departamento" class="bmd-label-floating">Departamento</label
+              >
+              <select
+                class="form-control"
+                id="departamento"
+                name="departamento"
+              >
+                <option value="0">Todos los Departamentos</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label for="subdepartamento" class="bmd-label-floating"
+                >Subdepartamento</label>
+                            <select class="form-control" id="subdepartamento" name="subdepartamento">
+                <option value="0">Todos los Subdepartamentos</option>
+              </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><i class="fas fa-box-open"></i> &nbsp; Tipo de Informe</legend>
+            <div class="col-12">
+                <div style="padding: 20px 0 5px 0; color: #004f45;">
+                    Tipo de Informe
+                </div>
+                <div class="form-group">
+                    <div class="radio" id="radio1">
+                        <label for="global">Global</label>
+                        <input type="radio" id="global" name="tipo" value="global" class="informes">
+                    </div>
+                    <div class="radio" id="radio2">
+                        <label for="detalle">Detalle</label>
+                        <input type="radio" id="detalle" name="tipo" value="detalle" class="informes">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info">
+        <i class="fas fa-paint-roller"></i> &nbsp; CLEAR
+      </button> &nbsp; &nbsp;
+            <button type="button" id="listadoInformeButton" class="btn btn-success">
+        <i class="far fa-save"></i> &nbsp; CONSULTAR
+      </button>
+        </p>
+    </form>
+</div>
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <div class="table-responsive">
+        <div id="toolbar" class="select">
+            <select class="form-control">
+        <option value="">Export Basic</option>
+        <option value="all">Export All</option>
+        <option value="selected">Export Selected</option>
+      </select>
+        </div>
+        <table id="listadoInformeTable" class="table table-dark table-sm" data-search="true" data-show-export="true" data-show-footer="true"></table>
+    </div>
+</div>

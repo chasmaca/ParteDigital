@@ -1,0 +1,92 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; NUEVO USUARIO
+    </h3>
+</div>
+
+
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <form class="form-neon" autocomplete="off" method="POST" id="altaUsuarioForm" name="altaUsuarioForm">
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="nombre" class="bmd-label-floating">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="apellido" class="bmd-label-floating">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="login" class="bmd-label-floating">Login</label>
+                            <input type="text" class="form-control" id="login" name="login" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="password" class="bmd-label-floating">Password</label>
+                            <input type="text" class="form-control" id="password" name="password" maxlength="30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="rol" class="bmd-label-floating">Rol</label>
+                            <select class="form-control" id="rol" name="rol">
+                                <option value="0">Selecciona el Rol</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container-fluid" id="capasRol" style="display:none;">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="departamento" class="bmd-label-floating">Departamento</label>
+                            <select multiple class="form-control" id="departamento" name="departamento">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="seleccionado" class="bmd-label-floating">Departamento Seleccionado</label>
+                            <select multiple class="form-control" id="seleccionado" name="seleccionado">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br><br><br>
+        <p class="text-center" style="margin-top: 40px;">
+            <button type="reset" class="btn btn-info"><i class="fas fa-paint-roller"></i> &nbsp; CLEAR</button> &nbsp; &nbsp;
+            <button type="button" id="altaUsuarioButton" class="btn btn-success"><i class="far fa-save"></i> &nbsp; GUARDAR</button>
+        </p>
+    </form>
+</div>
+
+<script src="./../assets/js/altaUsuario.js"></script>

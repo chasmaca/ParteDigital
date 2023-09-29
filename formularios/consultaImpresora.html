@@ -1,0 +1,31 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; LISTADO IMPRESORA
+    </h3>
+</div>
+
+<!-- Content here-->
+<div class="container-fluid">
+    <div class="overlayTransparent" id="overlayTransparent">
+        <div class="spin" data-spin />
+    </div>
+    <div class="table-responsive">
+        <div id="toolbar" class="select">
+            <select class="form-control">
+              <option value="">Export Basic</option>
+              <option value="all">Export All</option>
+              <option value="selected">Export Selected</option>
+            </select>
+          </div>
+          <div id="impresoraTable">
+              <table id="listadoImpresora"
+                     class="table table-dark table-sm"
+                     data-search="true"
+                     data-show-export="true"
+              ></table>
+          </div>
+    </div>
+</div>
+
+<script src="./../assets/js/consultaImpresora.js" ></script>

@@ -1,0 +1,40 @@
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-box fa-fw"></i> &nbsp; CARGA MASIVA
+    </h3>
+</div>
+
+<div class="container-fluid">
+    <form class="form-neon" autocomplete="off" method="POST" id="gestionFicheroForm" name="gestionFicheroForm" enctype="multipart/form-data">
+        <fieldset>
+            <legend><i class="far fa-image"></i> &nbsp; Listado</legend>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="cargaSubdepartamento" class="bmd-label-floating">Listado Subdepartamentos</label>
+                            <input type="file" class="form-control-file" id="cargaSubdepartamento" name="cargaSubdepartamento">
+                            <small class="text-muted">Fichero de carga Subdepartamentos.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <table id="exceltable">
+        </table>
+        <br><br><br>
+        <div class="table-responsive">
+            <div id="toolbar" class="select">
+                <select title="exportar" class="form-control">
+                  <option value="">Export Basic</option>
+                  <option value="all">Export All</option>
+                  <option value="selected">Export Selected</option>
+                </select>
+            </div>
+            <div id="cargaMasivaTable">
+                <table id="cargaMasiva" class="table table-dark table-sm" data-search="true"></table>
+            </div>
+        </div>
+    </form>
+</div>
