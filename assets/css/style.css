@@ -2568,6 +2568,16 @@ a {
     color: white;
 }
 
+
+.colorBlanco29 {
+    color: white;
+    font-size: 29px;
+}
+
+.colorOlvidoPassword {
+    color: #007bff;
+}
+
 .colorIndigoBack {
     background-color: indigo;
 }
@@ -2581,7 +2591,12 @@ a {
 }
 
 .margenSuperior {
-    padding-top: 5em;
+/*     padding-top: 5em; */
+    padding-top: 6em;
+}
+
+.margenSuperior10 {
+        padding-top: 10em;
 }
 
 .ancho34 {
